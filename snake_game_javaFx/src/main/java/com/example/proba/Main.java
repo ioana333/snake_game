@@ -27,7 +27,7 @@ import java.io.File;
 
 public class Main extends Application {
 
-    private static final int WIDTH = 800;
+    private static final int WIDTH = 700;
     private static final int HEIGHT = WIDTH;
     private static final int ROWS = 20;
     private static final int COLUMNS = ROWS;
@@ -70,7 +70,8 @@ public class Main extends Application {
         if(gameOver)
         {
             gc.setFill(Color.RED);
-            gc.setFont(new Font("Digital-7", 70));
+            //gc.setFont(new Font("Digital-7", 70));
+            gc.setFont(Font.loadFont(getClass().getResourceAsStream("/fonts/digital-7.ttf"), 70));
             gc.fillText("Game Over", WIDTH / 3, HEIGHT / 2);
 
             restartButton.setVisible(true);
@@ -81,7 +82,8 @@ public class Main extends Application {
         if (gameWon)
         {
             gc.setFill(Color.GREEN);
-            gc.setFont(new Font("Digital-7", 70));
+            //gc.setFont(new Font("Digital-7", 70));
+            gc.setFont(Font.loadFont(getClass().getResourceAsStream("/fonts/digital-7.ttf"), 70));
             gc.fillText("You Win!", WIDTH / 2.8, HEIGHT / 2);
 
             restartButton.setVisible(true);
@@ -242,7 +244,8 @@ public class Main extends Application {
     private void drawScore()
     {
         gc.setFill(Color.WHITE);
-        gc.setFont(new Font("Digital-7", 35));
+        //gc.setFont(new Font("Digital-7", 35));
+        gc.setFont(Font.loadFont(getClass().getResourceAsStream("/fonts/digital-7.ttf"), 30));
         gc.fillText("Score: " + score, 10, 35);
     }
 
@@ -348,7 +351,7 @@ public class Main extends Application {
 
         restartButton = new Button("PLAY");
         restartButton.setStyle("-fx-font-size: 16px; -fx-background-color: white; -fx-text-fill: blue;");
-        restartButton.setLayoutX(WIDTH / 2.0 - 50);
+        restartButton.setLayoutX(WIDTH / 1.8 - 50);
         restartButton.setLayoutY(HEIGHT / 2.0 + 50);
         restartButton.setVisible(false);
 
