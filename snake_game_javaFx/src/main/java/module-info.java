@@ -11,6 +11,8 @@ module com.example.proba {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires javafx.media;
+    requires java.desktop;
+    requires java.sql;
 
     opens com.example.proba to javafx.fxml;
     exports com.example.proba;
